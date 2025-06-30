@@ -1,38 +1,236 @@
-.App {
+/* Import a clean font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #2e0854; /* deep purple background */
+  color: #ffffff; /* white text */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: #c39bd3; /* light purple links */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.app {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #7a5af8; /* purple border */
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-image {
+  height: 40px;
+  width: auto;
+  margin-right: 12px;
+}
+
+.logo-text {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #d8b8ff; /* pale purple */
+  user-select: none;
+}
+
+.nav a {
+  margin-left: 1.8rem;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #d8b8ff;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: #f0e6ff; /* lighter purple on hover */
+}
+
+/* Hero Section */
+.hero {
+  padding: 5rem 0 4rem 0;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.hero h2 {
+  font-weight: 700;
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  color: #f0e6ff; /* very pale purple */
+  line-height: 1.2;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.hero p {
+  font-weight: 400;
+  font-size: 1.25rem;
+  color: #c9a9ff; /* medium light purple */
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.cta-button {
+  background-color: #7a5af8;
+  color: white;
+  border: none;
+  padding: 0.85rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(122, 90, 248, 0.8);
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  box-shadow: 0 10px 20px rgba(122, 90, 248, 1);
+  transform: scale(1.05);
+}
+
+/* About Section */
+.about {
+  background-color: #420a6e; /* darker purple block */
+  border-radius: 15px;
+  padding: 3rem 2rem;
+  margin-bottom: 5rem;
+  color: #e6d7ff;
+  box-shadow: 0 8px 25px rgba(66, 10, 110, 0.4);
+
+  /* Make sure layout stacks vertically */
+  display: block;
+  text-align: left;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: #d8b8ff;
+}
+
+.about p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+/* Products Section */
+.products {
+  padding: 4rem 0;
+}
+
+.products h3 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #b49fff;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap: 2.2rem;
+}
+
+.product-card {
+  background: #420a6e;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(66, 10, 110, 0.3);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  color: #e6d7ff;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+}
+
+.product-card:hover {
+  box-shadow: 0 10px 40px rgba(122, 90, 248, 0.8);
+  transform: translateY(-8px);
+}
+
+.product-card h4 {
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
+  color: #f0e6ff;
+}
+
+.product-card p {
+  flex-grow: 1;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  color: #d8b8ff;
+}
+
+.review-button {
+  background: linear-gradient(90deg, #7a5af8, #9f7aff);
   color: white;
+  border: none;
+  padding: 0.75rem 1.8rem;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(122, 90, 248, 0.6);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.review-button:hover {
+  box-shadow: 0 8px 24px rgba(122, 90, 248, 0.85);
+  transform: scale(1.05);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Contact Section */
+.contact {
+  padding: 3rem 0;
+  text-align: center;
+  color: #d8b8ff;
+}
+
+.contact h3 {
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #9f7aff;
+}
+
+.contact a {
+  color: #b49fff;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* Footer */
+.footer {
+  border-top: 1px solid #7a5af8;
+  padding: 1.5rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #b49fff;
 }

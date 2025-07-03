@@ -11,7 +11,7 @@ function Products() {
 
         {/* AutoCAD Summarizer Card */}
         <div className="product-card">
-          <h4>📐 AutoCAD Drawings Summarizer</h4>
+          <h4>📐 WayEye AutoCAD Drawings Summarizer</h4>
           <p>
             AI-powered model that reads AutoCAD drawings and extracts details like number of traffic 
             signs, road measurements, and structural insights — all automatically. 
@@ -28,7 +28,7 @@ function Products() {
 
         {/* Hair Loss Classifier Card */}
         <div className="product-card">
-          <h4>🧑‍🦲 Hair Loss Classifier</h4>
+          <h4>🧑‍🦲 SmartBald Hair Loss Classifier</h4>
           <p>
             Deep learning model built with ResNet-18 to detect baldness from face images. 
             Achieves <strong>over 85% accuracy</strong> with <strong>low prediction variance</strong> across 12K+ labeled samples. 
@@ -37,6 +37,22 @@ function Products() {
           <button
             className="review-button"
             onClick={() => window.open('https://efficio-ai.vercel.app/models/hair-loss')}
+          >
+            Review
+          </button>
+        </div>
+
+        {/* Trashy Garbage Truck Model Card */}
+        <div className="product-card">
+          <h4>🚛 Trashy Garbage Truck Proximity Detector</h4>
+          <p>
+            A computer vision model designed to detect when a garbage truck is close enough to a waste container, 
+            enabling the claw mechanism to engage automatically. Built to optimize waste collection efficiency 
+            and reduce manual intervention.
+          </p>
+          <button
+            className="review-button"
+            onClick={() => window.open('https://github.com/TechScopeComputerVision/trashy')}
           >
             Review
           </button>

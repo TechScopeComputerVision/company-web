@@ -57,7 +57,7 @@ function App() {
 
         <section id="contact" className="contact">
           <h3>Let's Connect</h3>
-          <p>Email: <a href="mailto:ronena72018@gmail.com">ronena72018@gmail.com</a></p>
+          <p>Email: <a href="mailto:techscope2025il@gmail.com">techscope2025il@gmail.com</a></p>
         </section>
 
         <footer className="footer">
